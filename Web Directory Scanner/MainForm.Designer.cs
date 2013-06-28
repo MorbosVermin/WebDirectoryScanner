@@ -33,7 +33,7 @@
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.btnNew = new System.Windows.Forms.Button();
             this.welcomePage1 = new Web_Directory_Scanner.WelcomePage();
-            this.btnSave = new System.Windows.Forms.Button();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -51,7 +51,6 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.splitContainer1.Panel1.Controls.Add(this.btnSave);
             this.splitContainer1.Panel1.Controls.Add(this.linkLabel1);
             this.splitContainer1.Panel1.Controls.Add(this.btnNew);
             // 
@@ -106,24 +105,6 @@
             this.welcomePage1.Size = new System.Drawing.Size(578, 498);
             this.welcomePage1.TabIndex = 0;
             // 
-            // btnSave
-            // 
-            this.btnSave.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btnSave.Image = global::Web_Directory_Scanner.Properties.Resources.save;
-            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(11, 126);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(147, 45);
-            this.btnSave.TabIndex = 2;
-            this.btnSave.Text = "  Save";
-            this.btnSave.UseVisualStyleBackColor = false;
-            this.btnSave.Visible = false;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -152,6 +133,6 @@
         private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private WelcomePage welcomePage1;
-        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }

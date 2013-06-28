@@ -11,19 +11,17 @@ namespace Web_Directory_Scanner
     public class PageManager
     {
         public SplitContainer Container { get; set; }
+        public UserControl WelcomePage { get; set; }
 
         public PageManager(SplitContainer container, UserControl primaryPage)
         {
             Container = container;
-            //Container.Panel2.Controls.Add(primaryPage);
+            WelcomePage = primaryPage;
         }
 
         public void ChangePage(UserControl newPage)
         {
-            Container.Panel2.Controls[0].Visible = false;
-
-            //Remove all but the primaryPage (first page)
-            for (int i = Container.Panel2.Controls.Count - 1; i > 1; i--)
+            for (int i = 0; i < Container.Panel2.Controls.Count; i++)
                 Container.Panel2.Controls.RemoveAt(i);
 
             newPage.Dock = DockStyle.Fill;
@@ -32,11 +30,10 @@ namespace Web_Directory_Scanner
 
         public void ShowWelcomePage()
         {
-            //Remove all but the primaryPage (first page)
-            for (int i = Container.Panel2.Controls.Count - 1; i > 1; i--)
+            for (int i = 0; i < Container.Panel2.Controls.Count; i++)
                 Container.Panel2.Controls.RemoveAt(i);
 
-            Container.Panel2.Controls[0].Visible = true;
+            Container.Panel2.Controls.Add(WelcomePage);
         }
     }
 }

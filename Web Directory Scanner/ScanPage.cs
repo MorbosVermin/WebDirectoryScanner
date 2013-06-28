@@ -59,10 +59,12 @@ namespace Web_Directory_Scanner
             UseWaitCursor = false;
             dgDirectories.UseWaitCursor = false;
             label1.Text = "Scan complete.";
-            tableLayoutPanel1.RowStyles[0].Height = 0;
+           
+            //tableLayoutPanel1.RowStyles[0].Height = 0;
             ScanHandler.CompletedScan(this, new EventArgs());
-            
-            //TODO Prompt or give user a chance to save results (CSV?)
+
+            lnkSave.Visible = true;
+            lnkClose.Visible = true;
         }
 
         void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
@@ -132,6 +134,37 @@ namespace Web_Directory_Scanner
             progressBar1.Style = ProgressBarStyle.Marquee;
             ScanHandler.StartedScan(this, new EventArgs());
             backgroundWorker1.RunWorkerAsync();
+        }
+
+        private void lnkSave_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Uri uri = new Uri(Properties.Settings.Default.last_url);
+            saveFileDialog1.FileName = String.Format("{0}_{1}.csv", uri.Host, DateTime.Now.ToString("ddMMyyyy"));
+            saveFileDialog1.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            saveFileDialog1.Filter = "Comma Separated Values File (*.csv)|*.csv|All files (*.*)|*.*";
+            DialogResult r = saveFileDialog1.ShowDialog(this);
+            if (r == System.Windows.Forms.DialogResult.OK)
+            {
+                string path = saveFileDialog1.FileName;
+                using (StreamWriter writer = new StreamWriter(File.Open(path, FileMode.CreateNew)))
+                {
+                    writer.WriteLine("StatusCode,URL,Timestamp");
+                    writer.Flush();
+
+                    foreach (DirectoryState state in directories)
+                    {
+                        writer.WriteLine(String.Format("\"{0}\",\"{1}\",\"{2}\"", state.StatusCode, state.URL, state.Timestamp.ToString("o")));
+                        writer.Flush();
+                    }
+                }
+
+                MessageBox.Show(String.Format("Successfully saved results to {0}", path), "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void lnkClose_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ClickHandler.HandleClick(this, new ClickHandler.ClickEventArgs("close_scan"));
         }
     }
 }

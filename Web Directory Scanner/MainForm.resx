@@ -121,7 +121,7 @@
   <data name="welcomePage1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAwAAAAFRCAYAAADDzMr1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAACw0AAAsNAe0HwCwAAAAHdElNRQfdBhsDCzijnF9jAAD/kklEQVR4Xu3999c0V3H9
+        YQUAAAAJcEhZcwAACwwAAAsMAT9AIsgAAAAHdElNRQfdBhsDCzijnF9jAAD/kklEQVR4Xu3999c0V3H9
         gVoglIWEhHKO6JVQAIFQFjlaBAEiOie+NsmAjW0wUeB017pr3X+4b3+ely02RZ3u05OeCfXDrJnp6elY
         fc7eVbuq/uRP/uRPhnrVNSgbKBsoGygbKBsoGygbKBsoGzgZGziZEy2iU2SvbKBsoGygbKBsoGygbKBs
         oGygmF4RoLKBsoGygbKBsoGygbKBsoGygZOygZM62WJ8xfrLBsoGygbKBsoGygbKBsoGTt0GigAU4y0b
@@ -1235,6 +1235,9 @@
         DZQNlA38sQ38/wF1ulUmcxQd4QAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="saveFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAMAICAQAAEABADoAgAANgAAACAgAAABAAgAqAgAAB4DAAAgIAAAAQAgAKgQAADGCwAAKAAAACAA

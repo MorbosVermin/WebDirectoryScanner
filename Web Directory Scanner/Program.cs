@@ -14,7 +14,7 @@ namespace Web_Directory_Scanner
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
+            //Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainForm());
         }

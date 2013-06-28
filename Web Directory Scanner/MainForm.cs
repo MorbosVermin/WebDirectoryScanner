@@ -62,14 +62,12 @@ namespace Web_Directory_Scanner
         {
             btnNew.Enabled = true;
             linkLabel1.Enabled = true;
-            btnSave.Visible = true;
         }
 
         void ScanHandler_Started(object sender, EventArgs e)
         {
             btnNew.Enabled = false;
             linkLabel1.Enabled = false;
-            btnSave.Visible = false;
         }
 
         void ClickHandler_Click(object sender, ClickHandler.ClickEventArgs e)
@@ -77,14 +75,14 @@ namespace Web_Directory_Scanner
             Console.WriteLine("User clicked button: {0}", e.Name);
             if (e.Name.Equals("exit"))
             {
-                //TODO check status and allow user to cancel out if needed.
+                //TODO check status and allow user to cancel/save if needed.
                 Dispose();
             }
             else if (e.Name.Equals("start_config"))
             {
                 pageManager.ChangePage(new ConfigurePage());
             }
-            else if (e.Name.Equals("cancel_scan"))
+            else if (e.Name.Equals("cancel_scan") || e.Name.Equals("close_scan"))
             {
                 pageManager.ShowWelcomePage();
             }
@@ -107,11 +105,6 @@ namespace Web_Directory_Scanner
         private void btnNew_Click(object sender, EventArgs e)
         {
             ClickHandler.HandleClick(this, new ClickHandler.ClickEventArgs("start_config"));
-        }
-
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
