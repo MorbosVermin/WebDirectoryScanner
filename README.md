@@ -13,3 +13,12 @@ Requirements
 http://www.microsoft.com/en-us/download/details.aspx?id=30653
 
 
+Binary Downloads
+===================
+
+Precompiled binaries for x86 and x86_64 are available...
+
+http://wds.waitwha.com/WebDirectoryScanner_x86-1.0.0.0.zip
+
+http://wds.waitwha.com/WebDirectoryScanner_x86_64-1.0.0.0.zip
+
