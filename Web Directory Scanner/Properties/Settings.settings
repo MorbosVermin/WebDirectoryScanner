@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Web_Directory_Scanner.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="dictionary_path" Type="System.String" Scope="User">
+      <Value Profile="(Default)">common_webdirs.txt</Value>
+    </Setting>
+    <Setting Name="strings" Type="System.String" Scope="User">
+      <Value Profile="(Default)">dev,admin,sql,.svn,.git,login,wp-content,sites/all,secret,hidden,old,2012,2013</Value>
+    </Setting>
+    <Setting Name="ua_default" Type="System.String" Scope="User">
+      <Value Profile="(Default)">WebDirectoryScanner/1.0 (en_US)</Value>
+    </Setting>
+    <Setting Name="last_url" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://</Value>
+    </Setting>
+    <Setting Name="scan_mode" Type="System.String" Scope="User">
+      <Value Profile="(Default)">normal</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
