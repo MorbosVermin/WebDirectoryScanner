@@ -23,16 +23,18 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>http://wds.waitwha.com/</InstallUrl>
-    <SupportUrl>http://guthub.com/MorbosVermin/WebDirectoryScanner</SupportUrl>
-    <ErrorReportUrl>http://guthub.com/MorbosVermin/WebDirectoryScanner</ErrorReportUrl>
+    <SupportUrl>http://github.com/MorbosVermin/WebDirectoryScanner</SupportUrl>
+    <ErrorReportUrl>http://github.com/MorbosVermin/WebDirectoryScanner</ErrorReportUrl>
     <ProductName>Web Directory Scanner</ProductName>
+    <PublisherName>MorbosVermin</PublisherName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
     <TrustUrlParameters>true</TrustUrlParameters>
-    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationRevision>2</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -99,6 +101,18 @@
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>search_lense.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>152ADA0D762CA69B885062ED56BC7FF84D62784B</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Web Directory Scanner_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -175,6 +189,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Web Directory Scanner_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
